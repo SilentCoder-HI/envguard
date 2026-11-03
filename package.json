@@ -1,0 +1,67 @@
+{
+  "name": "@silentcoderhi/envguard",
+  "version": "0.1.0",
+  "description": "One schema for your environment variables: validate, document, scan, and secure them.",
+  "license": "MIT",
+  "author": "Hussnain Iftikhar",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "envguard": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev:cli": "tsx src/cli/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "jiti": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^2.0.0"
+  },
+  "keywords": [
+    "env",
+    "dotenv",
+    "environment",
+    "validation",
+    "typescript",
+    "cli",
+    "schema"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilentCoder-HI/envguard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SilentCoder-HI/envguard/issues"
+  },
+  "homepage": "https://silentcodertools.vercel.app/docs/envguard/getting-started",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  }
+}

@@ -1,0 +1,9 @@
+src/
+test/
+playground/
+examples/
+.github/
+tsconfig.json
+tsup.config.ts
+*.tgz
+node_modules/
